@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export const db=() =>  { 
-    mongoose.connect("mongodb://localhost:27017/todo-app")
+    mongoose.connect(process.env.DB_URL)
 .then(() => {
     console.log("db conneted successfully")
 })
