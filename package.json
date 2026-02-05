@@ -10,7 +10,7 @@
     "start": "nodemon ./backend/server.js"
   },
   "dependencies": {
-    "cors": "^2.8.5",
+    "cors": "^2.8.6",
     "dotenv": "^17.2.3",
     "es6": "^0.0.7",
     "express": "^5.2.1",

@@ -8,7 +8,7 @@ export default function Todo() {
     const [editId,setEditId]=useState("-1");
     const [edittitle,setEditTitle]=useState("")
     const [editdescription,setEditDescription]=useState("");
-    const apiUrl = "http://localhost:8000/todos";
+    const apiUrl = process.env.REACT_APP_API_URL;
     
     
 
