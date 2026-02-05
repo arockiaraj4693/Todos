@@ -3,11 +3,10 @@ import cors from "cors";
 import { route2, router4, router5, router6 } from "./routs/postRouts.js";
 
 const app = express();
-app.use(cors());
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://todos-backend1.onrender.com/todos",
+    origin: "https://todos-eight-lemon.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   }),

@@ -1,5 +1,5 @@
 import express from "express";
-import { dlt, router1, router3, updt } from "../../model/todoSchema.js";
+import { dlt, router1, router3, updt } from "../model/todoSchema.js";
 
 export const route2 = express.Router();
 export const router4= express.Router();
