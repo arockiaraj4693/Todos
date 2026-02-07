@@ -65,7 +65,7 @@ export default function Todo() {
     setError("");
     // check inputs
     if (edittitle.trim() !== "" && editdescription.trim() !== "") {
-      fetch(`${process.env.REACT_APP_API_URL}/r1/${editId}`, {
+      fetch(`${process.env.REACT_APP_API_URL}/r1/+editId`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +105,7 @@ export default function Todo() {
   };
   const handleDelete = (id) => {
     if (window.confirm("Are You Sure Delete this TODO")) {
-      fetch(`${process.env.REACT_APP_API_URL}/r1/${id}`, {
+      fetch(`${process.env.REACT_APP_API_URL}/r1/+id`, {
         method: "DELETE",
       }).then(() => {
         const updatedTodos = todos.filter((item) => item._id !== id);
