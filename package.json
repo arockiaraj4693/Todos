@@ -14,7 +14,8 @@
     "dotenv": "^17.2.3",
     "es6": "^0.0.7",
     "express": "^5.2.1",
-    "mongoose": "^9.0.1"
+    "mongoose": "^9.0.1",
+    "proxy": "http://localhost5000"
   },
   "devDependencies": {
     "nodemon": "^3.1.11"
