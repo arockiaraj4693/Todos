@@ -57,7 +57,8 @@ export default function Todo() {
       });
   };
   const handleEdit = (item) => {
-    (setEditId(item._id), setEditTitle(item.title));
+    setEditId(item._id);
+    setEditTitle(item.title);
     setEditDescription(item.description);
   };
 
