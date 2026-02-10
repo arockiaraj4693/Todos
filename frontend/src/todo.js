@@ -41,7 +41,8 @@ export default function Todo() {
     }
   };
   const handleClear = () => {
-    (setTitle(""), setDescription(""));
+    setTitle("");
+    setDescription("");
   };
 
   useEffect(() => {
@@ -56,9 +57,8 @@ export default function Todo() {
       });
   };
   const handleEdit = (item) => {
-    (setEditId(item._id),
-      setEditTitle(item.title),
-      setEditDescription(item.description));
+    (setEditId(item._id), setEditTitle(item.title));
+    setEditDescription(item.description);
   };
 
   const handleUpdate = () => {
