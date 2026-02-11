@@ -8,6 +8,7 @@ export default function Todo() {
   const [editId, setEditId] = useState("-1");
   const [edittitle, setEditTitle] = useState("");
   const [editdescription, setEditDescription] = useState("");
+  const apiUrl = process.env.REACT_APP_API_URL;
 
   const handleSubmit = () => {
     setTitle("");
@@ -15,7 +16,7 @@ export default function Todo() {
     setError("");
     // check inputs
     if ((title || "").trim() !== "" && (description || "").trim() !== "") {
-      fetch(`${process.env.REACT_APP_API_URL}/r1`, {
+      fetch(`${apiUrl}/+todos/+r1`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,7 +50,7 @@ export default function Todo() {
   }, []);
 
   const getItems = () => {
-    fetch(`${process.env.REACT_APP_API_URL}/r1`)
+    fetch(`${apiUrl}/+todos/+r1`)
       .then((res) => res.json())
       .then((res) => {
         setTodos(res);
@@ -65,7 +66,7 @@ export default function Todo() {
     setError("");
     // check inputs
     if (edittitle.trim() !== "" && editdescription.trim() !== "") {
-      fetch(`${process.env.REACT_APP_API_URL}/r1/+editId`, {
+      fetch(`${apiUrl}/+todos/+r1/+editId`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -105,7 +106,7 @@ export default function Todo() {
   };
   const handleDelete = (id) => {
     if (window.confirm("Are You Sure Delete this TODO")) {
-      fetch(`${process.env.REACT_APP_API_URL}/r1/+id`, {
+      fetch(`${apiUrl}/+todos/+r1/+id`, {
         method: "DELETE",
       }).then(() => {
         const updatedTodos = todos.filter((item) => item._id !== id);
