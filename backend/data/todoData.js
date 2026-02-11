@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 export const db=() =>  { 
-    mongoose.connect(process.env.DB_URL)
+    mongoose.connect("mongodb+srv://arockiaraj:raju@todos.nfbu0ap.mongodb.net/?appName=todos")
 .then(() => {
     console.log("db conneted successfully")
 })
