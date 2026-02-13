@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://todos-7gv2.vercel.app",
+      "https://todos-neon-two.vercel.app",
       "http://localhost:3000",
       "http://10.94.59.76:3000",
     ],
