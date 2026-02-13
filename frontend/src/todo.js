@@ -9,7 +9,6 @@ export default function Todo() {
   const [edittitle, setEditTitle] = useState("");
   const [editdescription, setEditDescription] = useState("");
   const apiUrl = process.env.REACT_APP_API_URL;
-  console.log("API URL:", apiUrl);
 
   const handleSubmit = () => {
     setTitle("");
